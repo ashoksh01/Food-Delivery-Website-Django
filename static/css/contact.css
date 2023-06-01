@@ -1,0 +1,8 @@
+.conct{
+    background-image: url(/static/images/img5.jpg);
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}

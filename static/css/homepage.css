@@ -1,0 +1,73 @@
+/*========== ABOUT ==========*/
+.about__data{
+  text-align: center;
+}
+
+
+
+.about__description{
+  margin-bottom: var(--mb-3);
+}
+
+.about__img{
+  width: 280px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+
+.abtasty{
+font-size: 30px;
+
+color:	black;
+
+}
+
+.abptasty{
+font-size: 20px;
+color: 	black;
+
+}
+
+.app_data{
+  text-align: center;
+}
+
+.app_description{
+  margin-bottom: var(--mb-5);
+}
+
+.app_stores{
+  margin-bottom: var(--mb-4);
+}
+
+.app_store{
+  width: 120px;
+  margin: 0 var(--mb-1);
+}
+
+.app_img{
+  width: 230px;
+  justify-self: center;
+}
+
+<!--=================== Image Css=============-->
+
+.container{
+margin-top:8%;
+}
+
+.inner{
+overflow: hidden;
+
+}
+
+.inner img{
+transition: all 0.5s ease;
+color: blue;
+}
+
+.inner:hover img{
+transform: scale(1.2);
+
+}

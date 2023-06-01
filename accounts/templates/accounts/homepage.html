@@ -1,0 +1,463 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Homepage</title>
+<style>
+
+    /*========== ABOUT ==========*/
+.about__data{
+  text-align: center;
+}
+
+
+
+.about__description{
+  margin-bottom: var(--mb-3);
+}
+
+.about__img{
+  width: 280px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+
+.abtasty{
+font-size: 30px;
+
+color:	black;
+
+}
+
+.abptasty{
+font-size: 20px;
+color: 	black;
+
+}
+
+.app_data{
+  text-align: center;
+}
+
+.app_description{
+  margin-bottom: var(--mb-5);
+}
+
+.app_stores{
+  margin-bottom: var(--mb-4);
+}
+
+.app_store{
+  width: 120px;
+  margin: 0 var(--mb-1);
+}
+
+.app_img{
+  width: 230px;
+  justify-self: center;
+}
+
+<!--=================== Image Css=============-->
+
+.container{
+margin-top:8%;
+}
+
+.inner{
+overflow: hidden;
+
+}
+
+.inner img{
+transition: all 0.5s ease;
+color: blue;
+}
+
+.inner:hover img{
+transform: scale(1.2);
+
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+{% endblock title %}
+{% block main_content %}
+
+<!--================== Homepage carousel Image==========================-->
+
+<div class="container-fluid p-3">
+    <div id="carouselExampleCaptions" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width:90%;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/food1.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="abtasty">Tasty food your choice</h5>
+                    <p class="abptasty">Contact us for the tasty food with fast service.</p>
+                </div>
+            </div>
+            <div class="carousel-item w-60%">
+                <img src="{% static 'images/food6.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="abtasty">Tasty food your choice</h5>
+                    <p class="abptasty">Contact us for the tasty food with fast service.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/food7.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="abtasty">Tasty food your choice</h5>
+                    <p class="abptasty">Contact us for the tasty food with fast service.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!--======================= About Us Sections================================-->
+<div data-aos="fade-up-right">
+    <div class="p-3 " id="about">
+        <div class="about section bd-container p-0 bg-light">
+            <div class="about__container row">
+                <div class="col">
+                    <img src="{% static 'images/food3.jpg' %}" class="ms-3" style="width:500px;">
+                </div>
+                <div class="col about__data me-5">
+                    <span class="section-subtitle about__initial"></span>
+                    <h1>About Us</h1>
+                    <h4 class="section-title about__initial">We cook the best <br> tasty food</h4>
+                    <p class="about__description m-4 justify-content-center fs-5 text-dark text-center" style=""> We
+                        cook
+                        the best food
+                        in the entire
+                        city
+                        with excellent customer service,
+                        the best meals and at the best price visit us.
+                        Food is any substance consumed to provide nutritional
+                        support for an organism. Food is usually of plant
+                        animal or fungal origin, and contains essential
+                        nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.
+                        Established in 1954, TastyFood is the second biggest fast food burger chain in Nepal.
+                        The first home of customary burgers, our promise to premium fixings, signature formulas, and
+                        family-accommodating feasting encounters is the thing that has characterized our
+                        image for in excess of 50 fruitful years. We are tied in with presenting crisp food,
+                        regardless of whether it implies going the additional mile. When you stroll through
+                        our entryways, we do what we can to make everybody
+                        feel comfortable in light of the fact that our family stretches out through your locale.</p>
+                    <a href="/contact" class="btn btn-outline-info m-2">Contact Us</a>
+                    <a href="/foods/menu" class="btn btn-outline-info m-2">View Menu</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================Our popular Item sections============-->
+
+    <div class="p-3">
+        <h1 class="text-center atag" style="font-size:50px;">Our Popular Items</h1>
+        <div class="row justify-content-around">
+            <div class="card col-md-3 m-5 shadow inner">
+                <div data-aos="fade-up"
+                     data-aos-duration="3000">
+
+                    <img src="{% static 'images/blackpasta1.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Dancake</h5>
+                    <p>Rs. 510</p>
+                    <a href="/foods/get_food_user" class="btn btn-success">Order now</a>
+                </div>
+            </div>
+            <div class="card col-md-3 m-5 shadow inner">
+                <div data-aos="fade-up"
+                     data-aos-duration="3000">
+                    <img src="{% static 'images/blackpasta2.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pork Chop</h5>
+                    <p>Rs. 250</p>
+                    <a href="/foods/get_food_user" class="btn btn-success"><i
+                            class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                </div>
+            </div>
+
+            <div class="card col-md-3 m-5 shadow inner">
+                <div data-aos="fade-up"
+                     data-aos-duration="3000">
+                    <img src="{% static 'images/blackpasta3.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Vegetable Foods</h5>
+                    <p>Rs. 450</p>
+                    <a href="/foods/get_food_user" class="btn btn-success"><i
+                            class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                </div>
+            </div>
+
+            <div class="card col-md-3 m-5 shadow inner">
+                <div data-aos="fade-down"
+                     data-aos-easing="linear"
+                     data-aos-duration="1500">
+
+                    <img src="{% static 'images/blackpasta4.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Burger</h5>
+                    <p>Rs. 480</p>
+                    <a href="/foods/get_food_user" class="btn btn-success"><i
+                            class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                </div>
+            </div>
+
+            <div class="card col-md-3 m-5 shadow inner">
+                <div data-aos="fade-down"
+                     data-aos-easing="linear"
+                     data-aos-duration="1500">
+                    <img src="{% static 'images/blackpasta5.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cheese Pizza</h5>
+                    <p>Rs. 770</p>
+                    <a href="/foods/get_food_user" class="btn btn-success"><i
+                            class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                </div>
+            </div>
+
+
+            <div class="card col-md-3 m-5 shadow inner">
+                <div data-aos="fade-down"
+                     data-aos-easing="linear"
+                     data-aos-duration="1500">
+                    <img src="{% static 'images/blackpasta6.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Mix Pizza</h5>
+                    <p>Rs. 880</p>
+                    <a href="/foods/get_food_user" class="btn btn-success"><i
+                            class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                </div>
+            </div>
+
+            <!--            =========chef sections==========-->
+
+            <div class="row m-3 justify-content-center text-center fs-5">
+
+                <h1 class="text-content m-2 atag" style="font-size:40px;">Our Chefs</h1>
+            </div>
+
+            <div class="card  shadow inner " style="width: 18rem;">
+                <img src="{% static 'images/chef1.jpg' %}" class="" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="text-primary">James Beard.</h5>
+                    <p class="card-text">A great chef knows that great dishes are those that make great memories.
+                        You
+                        cannot be a good chef, until you are a great cook.</p>
+                    <ul>
+                        <h6 class="atag " style="font-size:15px;">Connect With Our Chef In</h6>
+                        <a href="#" class="footer__social"><i class="bi bi-instagram fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-facebook fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-twitter  fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-google  fs-4 m-2"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow inner" style="width: 18rem;">
+                <img src="{% static 'images/chef2.jpg' %}" class="" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="text-primary">Nicolas Appert</h5>
+                    <p class="card-text">A great chef knows that great dishes are those that make great memories.
+                        You
+                        cannot be a good chef, until you are a great cook.</p>
+                    <ul>
+                        <h6 class="atag " style="font-size:15px;">Connect With Our Chef In</h6>
+                        <a href="#" class="footer__social"><i class="bi bi-instagram fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-facebook fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-twitter  fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-google  fs-4 m-2"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow inner " style="width: 18rem;">
+                <img src="{% static 'images/chef3.jpg' %}" class="" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="text-primary">Grant Achatz</h5>
+                    <p class="card-text">A great chef knows that great dishes are those that make great memories.
+                        You
+                        cannot be a good chef, until you are a great cook.</p>
+                    <ul>
+                        <h6 class="atag " style="font-size:15px;">Connect With Our Chef In</h6>
+                        <a href="#" class="footer__social"><i class="bi bi-instagram fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-facebook fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-twitter  fs-4 m-2"></i></a>
+                        <a href="#" class="footer__social"><i class="bi bi-google  fs-4 m-2"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+            <!--            ================Our Weekly Best Items=========================-->
+
+
+            <div class="p-3">
+                <h1 class="text-center atag" style="font-size:50px;">Our Weekly Best Items</h1>
+                <div class="row justify-content-around">
+                    <div class="card col-md-3 m-5 shadow inner">
+                        <div data-aos="fade-up"
+                             data-aos-duration="3000">
+                            <img src="{% static 'images/img3.jpg' %}" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Thuppa with other items</h5>
+                            <p>Rs. 910</p>
+                            <a href="/foods/get_food_user" class="btn btn-success">Order now</a>
+                        </div>
+                    </div>
+                    <div class="card col-md-3 m-5 shadow inner">
+                        <div data-aos="fade-up"
+                             data-aos-duration="3000">
+                            <img src="{% static 'images/img4.jpg' %}" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Burger and sandwitch with other veg items</h5>
+                            <p>Rs. 250</p>
+                            <a href="/foods/get_food_user" class="btn btn-success"><i
+                                    class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-3 m-5 shadow inner">
+                        <div data-aos="fade-up"
+                             data-aos-duration="3000">
+                            <img src="{% static 'images/img5.jpg' %}" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sweets with veg items</h5>
+                            <p>Rs. 250</p>
+                            <a href="/foods/get_food_user" class="btn btn-success"><i
+                                    class="bi bi-cart-plus-fill fs-5"></i>Order now</a>
+                        </div>
+                    </div>
+
+
+                    <!--            =================== Our Service section================-->
+
+
+                    <div class="d-flex mx-auto m-3 justify-content-center text-center">
+                        <div>
+                            <div class="section-subtitle atag" style="font-size:40px;">Offering</div>
+                            <h2 class="section-title text-success">Our amazing services </h2>
+
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+
+                        <div class="m-5 shadow inner text-center">
+                            <img src="{% static 'images/delivery.jpg' %}" class="" alt="...">
+                            <h2 class="fs-5  text-danger">Free delivery for order more than Rs.1000</h2>
+                            <p class="fs-5 text-dark">We offer our clients excellent quality services for many
+                                years,
+                                with the
+                                best and delicious food
+                                in
+                                the city.</p>
+                        </div>
+                        <div class="m-5 shadow inner text-center">
+                            <img src="{% static 'images/minorder.jpg' %}" class="" alt="...">
+                            <h2 class="fs-5 text-danger">No minimum order</h2>
+                            <p class="fs-5 text-dark ">We offer our clients excellent quality services for many
+                                years,
+                                with the
+                                best and delicious food
+                                in
+                                the city.</p>
+                        </div>
+
+                        <div class="m-5 shadow inner text-center">
+                            <img src="{% static 'images/cashbackwith.jpg' %}" class="" alt="...">
+                            <h2 class="fs-5  text-danger">Cash back with every order</h2>
+                            <p class="fs-5 text-dark">We offer our clients excellent quality services for many
+                                years,
+                                with the
+                                best and delicious food
+                                in
+                                the city.</p>
+                        </div>
+
+                        <div class="m-5 shadow inner text-center">
+                            <img src="{% static 'images/payonlineorcash.jpg' %}" class="" alt="...">
+                            <h2 class="fs-5 text-danger">Pay online or cash on delivery</h2>
+                            <p class="fs-5 text-dark">We offer our clients excellent quality services for many
+                                years,
+                                with the
+                                best and delicious food
+                                in the city.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 ">
+                        <div class="about section bd-container p-0 bg-light">
+                            <div class="about__container row">
+                                <div class="col inner text-center">
+                                    <img src="{% static 'images/movil-app.png' %}" class="ms-3"
+                                         style="width:400px;">
+                                </div>
+                                <div class="col-md-6 m-2 app_data">
+                                    <span class="app_initial m-2 text-danger fs-1 ">App</span>
+
+                                    <h2 class="app_initial atag m-3 fs-2">App is aviable</h2>
+                                    <p class="app_description text-dark fs-4 text-center">Find our application and
+                                        download it, you
+                                        can make
+                                        reservations,
+                                        food orders, see your deliveries on the way and much more.</p>
+                                    <a href="/" class="m-3">
+                                        <img src="{% static 'images/app3.jpg' %}" class="m-3" alt="...">
+                                        <img src="{% static 'images/app4.jpg' %}" class="m-3" alt="...">
+                                    </a>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            {% endblock main_content %}

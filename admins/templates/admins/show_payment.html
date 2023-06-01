@@ -1,0 +1,45 @@
+{% extends 'layout-admin.html' %}
+{% block title %}
+<title>Payments</title>
+{% endblock title %}
+{% block main_content %}
+<div class="container-fluid" style="min-height:300px;">
+    <div class="row">
+        <div class="col mt-4 mb-4">
+            <h1 class="text-center text-uppercase m-4 font-weight-bold">All Payment History</h1>
+            {% include 'messages.html' %}
+            <div class="card shadow-lg ">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Address</th>
+                            <th>Food ID</th>
+                            <th>Contact Number</th>
+                            <th>Total Price</th>
+                            <th>Date</th>
+
+                        </tr>
+                        </thead>
+                        <tbody class="align-items-center">
+                        {% for payment in payment %}
+                        <tr>
+                             <td>{{payment.user_id}}</td>
+                            <td>{{payment.contact_address}}</td>
+                            <td>{{payment.food_id}}</td>
+                            <td>{{payment.contact_no}}</td>
+                            <td>{{payment.total_price}}</td>
+                            <td>{{payment.created_date}}</td>
+
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

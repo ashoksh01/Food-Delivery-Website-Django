@@ -1,0 +1,10 @@
+<!--=======card body css========-->
+    .card-body a{
+    text-decoration:none;
+    color:pink;
+    }
+    .card-body a:hover{
+    color:black;
+    }
+
+

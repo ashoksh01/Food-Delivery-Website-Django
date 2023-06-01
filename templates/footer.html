@@ -1,0 +1,261 @@
+<style>
+<!--===================Footer Style=====================-->
+
+.footer__social{
+font-size: 1.5rem;
+color: var(--title-color);
+margin-right: var(--mb-2);
+}
+
+.footer__logo{
+  font-size: 30px;
+  color: green;
+  font-weight: var(--font-semi-bold);
+  }
+
+.footer__description{
+  display: block;
+  font-size: 20px;
+  margin: .25rem 0 ;
+  font-weight: var(--font-semi-bold);
+  color: green;
+}
+
+.atag{
+position: relative;
+text-decoration: none;
+color: black;
+font-size: 18px;
+letter-spacing: 0.5px;
+padding: 0;
+}
+
+.atag:after {
+content: "";
+position: absolute;
+background-color: skyblue;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -2px;
+transition: 0.3s;
+}
+
+.atag:hover{
+color: skyblue;
+}
+
+.atag:hover:after{
+width: 100%;
+transition: 0.3s;
+
+}
+
+
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+</style>
+<div class="container-fluid p-0">
+    <div class="map p-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.451278418032!2d85.30937981506199!3d27.70334958279355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18550c29af13%3A0x8efc346d0fd5e569!2z4KSo4KSv4KS-4KSBIOCkuOCkoeCklSwgS2F0aG1hbmR1IDQ0NjAw!5e0!3m2!1sen!2snp!4v1632244888075!5m2!1sen!2snp"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4 class="text-uppercase m-4 font-weight-bold text-light">home</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="text-uppercase m-4 font-weight-bold text-light">get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Ordering</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                    <li><a href="#">Payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="text-uppercase m-4 font-weight-bold text-light">online order</h4>
+                <ul>
+                    <li><a href="#">Buff Foods</a></li>
+                    <li><a href="#">Veg Foods</a></li>
+                    <li><a href="#">Chicken Foods</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="text-uppercase m-4 font-weight-bold text-light">follow us</h4>
+                <div class="social-links text-light">
+                    <ul>
+                        <i class="bi bi-geo-alt text-light"></i> Address: TastyFood, 201 Sundhara Street Kathmandu <br>
+                        <i class="bi bi-telephone "></i> Phone: +977-9812000000 <br>
+                        <i class="bi bi-envelope-open-fill "></i> Email: info@tastyfood.com <br> <br>
+
+                        <a href="#" class=""><i class="bi bi-instagram fs-5 "></i></a>
+                        <a href="#" class=""><i class="bi bi-facebook fs-5 "></i></a>
+                        <a href="#" class=""><i class="bi bi-twitter  fs-5 "></i></a>
+                        <a href="#" class=""><i class="bi bi-google  fs-5 "></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--<div class="container-fluid p-0">-->
+<!--    <div class="map p-3">-->
+<!--        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.451278418032!2d85.30937981506199!3d27.70334958279355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18550c29af13%3A0x8efc346d0fd5e569!2z4KSo4KSv4KS-4KSBIOCkuOCkoeCklSwgS2F0aG1hbmR1IDQ0NjAw!5e0!3m2!1sen!2snp!4v1632244888075!5m2!1sen!2snp"-->
+<!--                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">-->
+<!--        </iframe>-->
+<!--    </div>-->
+
+
+<!--    <div class=" container-fluid text-black mt-5 ">-->
+<!--        <div class="row justify-content-center">-->
+
+<!--            <div class="first col-md-4">-->
+<!--                <h4 class="text-danger font-wright-bold">HOME</h4>-->
+
+<!--                <ul class="list-unstyled">-->
+
+<!--                    <li>About Us</li>-->
+<!--                    <li>Team</li>-->
+<!--                    <li>Careers</li>-->
+<!--                    <li>Blog</li>-->
+<!--                </ul>-->
+
+<!--            </div>-->
+
+<!--            <div class="second col-md-4">-->
+<!--                <h4 class="text-danger font-wright-bold">CONTACT</h4>-->
+<!--                <ul class="list-unstyled">-->
+
+<!--                    <li><i class="bi bi-geo-alt m-2"></i> Address: TastyFood, 201 Sundhara Street Kathmandu</li>-->
+<!--                    <li><i class="bi bi-telephone m-2"></i> Phone: +977-9812000000</li>-->
+<!--                    <li><i class="bi bi-envelope-open-fill m-2"></i> Email: info@tastyfood.com</li>-->
+
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="third col-md-4">-->
+<!--                <a href="#" class="footer__logo ">Tasty Food</a>-->
+<!--                <p class="footer__description">Restaurant</p>-->
+<!--                <ul class="footer_home">-->
+
+<!--                    <a href="#" class="footer__social"><i class="bi bi-instagram fs-4 m-2"></i></a>-->
+<!--                    <a href="#" class="footer__social"><i class="bi bi-facebook fs-4 m-2"></i></a>-->
+<!--                    <a href="#" class="footer__social"><i class="bi bi-twitter  fs-4 m-2"></i></a>-->
+<!--                    <a href="#" class="footer__social"><i class="bi bi-google  fs-4 m-2"></i></a>-->
+<!--                </ul>-->
+
+<!--            </div>-->
+
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+

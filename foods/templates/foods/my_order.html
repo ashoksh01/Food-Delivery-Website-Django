@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>My Orders</title>
+{% endblock title %}
+
+{% block main_content %}
+
+<style>
+    .myord{
+    background-image: url(/static/images/img7.jpg);
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
+
+</style>
+<div class="container-fluid" style="min-height:300px;">
+
+    <div class="row">
+        <div class="col mt-4 mb-4 myord">
+            <h1 class="text-center text-uppercase m-4 font-weight-bold text-light">My Order History</h1>
+            {% include 'messages.html' %}
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Items Name</th>
+                            <th>Items Price</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Ordered Date</th>
+                            <th>Contact Number</th>
+                            <th>Delivery Location</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody class="align-items-center">
+                        {% for item in items %}
+                        <tr>
+                            <td>{{item.food.food_name}}</td>
+                            <td>{{item.food.food_price}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td>{{item.total_price}}</td>
+                            <td>{{item.created_date}}</td>
+                            <td>{{item.contact_no}}</td>
+                            <td>{{item.contact_address}}</td>
+                            <td>{{item.status}}</td>
+                        </tr>
+                        {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

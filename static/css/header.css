@@ -1,0 +1,45 @@
+<!--===========CSS style==============-->
+.navbar-brand{
+  font-size: 2rem;
+  color: white;
+}
+
+nav-items{
+height: 100vh;
+width: 70vw;
+min-width: 600px;
+display: flex;
+justify-content: space-around;
+margin: auto;
+}
+<!--========================Style of navbar=================-->
+
+.atag{
+position: relative;
+text-decoration: none;
+color: black;
+font-size: 18px;
+letter-spacing: 0.5px;
+padding: 0;
+}
+
+.atag:after {
+content: "";
+position: absolute;
+background-color: skyblue;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -2px;
+transition: 0.3s;
+}
+
+.atag:hover{
+color: skyblue;
+}
+
+.atag:hover:after{
+width: 100%;
+transition: 0.3s;
+
+}

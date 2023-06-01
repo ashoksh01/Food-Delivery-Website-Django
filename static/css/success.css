@@ -1,0 +1,8 @@
+.loginlog{
+    background-image: url(/static/images/food7.jpg);
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}

@@ -1,0 +1,67 @@
+{% extends 'layout-admin.html' %}
+{% load static %}
+{% block title %}
+<title>Admin-Dashboard</title>
+{% endblock title %}
+{% block main_content %}
+
+<div class="container">
+    <h1 class="text-center btn-info">Welcome To Admin Dashboard</h1>
+    {% include 'messages.html'%}
+    <div class="row">
+        <div class="col">
+            <div class="card text-white bg-success mb-3 m-3" style="max-width: 25rem;">
+                <div class="card-header text-center">Total Category</div>
+                <div class="card-body">
+                    <a href="/foods/get_category">
+                        <h1 class="card-title text-center">{{category_count}}</h1></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-success mb-3 m-3" style="max-width: 25rem;">
+                <div class="card-header text-center">Total Food</div>
+                <div class="card-body">
+                    <a href="/foods/get_food">
+                        <h1 class="card-title text-center">{{food_count}}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card text-white bg-danger mb-3 m-3" style="max-width: 25rem;">
+                <div class="card-header text-center bg-danger">Total Admins</div>
+                <div class="card-body">
+                    <a href="/admins/show_admins"><h1 class="card-title text-center">{{admin_count}}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-secondary mb-3 m-3" style="max-width: 25rem;">
+                <div class="card-header text-center">Total Users</div>
+                <div class="card-body">
+                    <a href="show_users"><h1 class="card-title text-center">{{user_count}}</h1></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card text-white bg-secondary mb-3 m-3" style="max-width: 25rem;">
+                <div class="card-header text-center">Total Orders</div>
+                <div class="card-body">
+                    <a href="/admins/all_orders"><h1 class="card-title text-center">{{order_count}}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock main_content %}

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>User Homepage</title>
+{% endblock title %}
+
+{% block main_content %}
+<h1 class="text-center">User Dashboard</h1>
+<div class="container">
+    <div class="row justify-content-around">
+        {% include 'messages.html' %}
+        {% for i in foods %}
+        <div class="card col-md-3 m-4">
+            <img src="/{{i.food_image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{i.food_name}}</h5>
+                <p class="card-text">Rs. {{i.food_price}}</p>
+                <p class="card-text">{{i.category.category_name}}</p>
+                <a href="/foods/order_now/{{i.id}}" class="btn btn-primary"
+                   onclick="return conform('Are you sure to order this food ?')"> <i
+                        class="bi bi-cart-plus-fill fs-5"></i> Order now</a>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock main_content %}
+
+

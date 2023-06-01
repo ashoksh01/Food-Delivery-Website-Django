@@ -1,0 +1,34 @@
+span.help-block{
+color:red;
+font-size:12px;
+}
+
+p.help-block, .myForm ul li{font-size:12px;}
+
+
+.myForm label.control-label, .myForm div{width:100%;}
+
+
+
+
+.footer__social{
+font-size: 1.5rem;
+color: var(--title-color);
+margin-right: var(--mb-2);
+}
+
+.footer__logo{
+  font-size: 30px;
+  color: green;
+  font-weight: var(--font-semi-bold);
+  }
+
+.footer__description{
+  display: block;A
+  font-size: 20px;
+  margin: .25rem 0 ;
+  font-weight: var(--font-semi-bold);
+  color: green;
+
+}
+

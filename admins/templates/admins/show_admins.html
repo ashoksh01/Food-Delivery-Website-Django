@@ -1,0 +1,49 @@
+{% extends 'layout-admin.html' %}
+{% block title %}
+<title>All Admins</title>
+{% endblock title %}
+{% block main_content %}
+<div class="container-fluid" style="min-height:300px;">
+    <div class="row">
+        <div class="col mt-4 mb-4">
+            <h1 class="text-center text-uppercase m-4 font-weight-bold">All Admins</h1>
+            {% include 'messages.html' %}
+            <div class="card shadow-lg ">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Joined Date</th>
+                            <th>Is Staff</th>
+                            <th>Action</th>
+
+                        </tr>
+                        </thead>
+                        <tbody class="align-items-center">
+                        {% for admins in admins %}
+                        <tr>
+                            <td>{{admins.username}}</td>
+                            <td>{{admins.first_name}}</td>
+                            <td>{{admins.last_name}}</td>
+                            <td>{{admins.email}}</td>
+                            <td>{{admins.date_joined}}</td>
+                            <td>{{admins.is_staff}}</td>
+
+
+                            <td><a href="/admins/demote_admin/{{admins.id}}"
+                                   onclick="return confirm('Are you sure want to demote?')">Demote</a></td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>My Order List</title>
+{% endblock%}
+
+{% block main_content %}
+
+<style>
+    .myordnow{
+    background-image: url(/static/images/img5.jpg);
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+</style>
+<div class=" p-3 container" style="width:1000px;">
+    <div class="row">
+
+        <div class="col-md-10 offset-md-1 myordnow">
+            <h1 class="text-center text-danger text-uppercase m-3 font-weight-bold">My Order List</h1>
+            {% include 'messages.html' %}
+            <div class="card py-2 px-2">
+
+
+                <table class="table-striped">
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Food Price</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+
+                    </tr>
+                    {% for i in items %}
+                    <tr>
+                        <td> {{ i.food.food_name }}</td>
+                        <td> {{ i.food.food_price }}</td>
+                        <td> {{ i.created_date }}</td>
+
+
+                        <td><a class="btn btn-primary btn-sm" href="/foods/remove_order_item/{{i.id}}">Remove</a> &nbsp;
+                            <a class="btn btn-danger btn-sm" href="/foods/order_form/{{i.food.id}}/{{i.id}}" onclick="return confirm('Are you sure want to order?')" >Order</a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

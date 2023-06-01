@@ -1,0 +1,106 @@
+<style>
+
+
+
+
+</style>
+
+<!--==================Navbar and Homepage Design and links===================-->
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 justify-content-between">
+        <div class="container-fluid p-0" STYLE="WIDTH:80%">
+            <a class="navbar-brand atag text-danger fs-2" href="/foods/homepage">TastyFood</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item m-3">
+                        <a class="nav-link atag text-dark" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item m-3">
+                        <a class="nav-link atag text-dark" href="#about">About</a>
+                    </li>
+
+
+                    <li class="nav-item m-3">
+                        <a class="nav-link {{activate_category}} atag text-dark"
+                           aria-current="page" href="/foods/get_category_user">Category</a>
+                    </li>
+
+
+                    <li class="nav-item m-3">
+                        <a class="nav-link {{activate_food}} atag text-dark" href="/foods/get_food_user">Foods</a>
+                    </li>
+
+                    <li class="nav-item m-3">
+                        <a class="nav-link {{activate_menu}} atag text-dark" href="/foods/menu">Menu</a>
+                    </li>
+
+
+                </ul>
+
+
+                <ul class="navbar-nav p-3">
+                    <div class="nav-item">
+                        {% if user.is_authenticated %}
+                        <div class="btn-group ">
+                            <button type="button" class="btn btn-outline-info text-black text-dark atag">Profile,
+                                {{user.username}}
+                            </button>
+                            <button type="button" class="btn btn-outline-info dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu " style="width:200px">
+                                <li class="nav-item m-2">
+                                    <a class="nav-link text-dark {{activate_order_now}} " href="/foods/order_now"><i
+                                            class="bi bi-bookmark-plus m-2 "></i>Add Order</a>
+                                </li>
+
+                                <li class="nav-item m-2">
+                                    <a class="nav-link text-dark {{activate_myorders}} " href="/foods/my_order"><i
+                                            class="bi bi-bag-check m-2"></i>My Order</a>
+                                </li>
+
+                                <li class="nav-item m-2">
+                                    <a class="nav-link text-dark {{activate_profile}} " href="/profile"><i
+                                            class="bi bi-person m-2"></i>My Profile</a>
+                                </li>
+
+                                <li class="nav-item m-2">
+                                    <a class="nav-link text-dark" href="/foods/password_change"><i
+                                            class="bi bi-key m-2"></i>Change Password</a>
+                                </li>
+
+
+                                <li class="nav-item m-2">
+                                    <a class="nav-link btn btn-danger text-dark " href="/logout"><i
+                                            class="bi bi-box-arrow-right m-2"></i>Logout</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        {% else %}
+
+                        <div class="d-flex">
+                            <button class="atag d-flex m-2">
+                                <a class="nav-link  btn-outline-info " href="/login">Login</a>
+                                <a class="nav-link  btn-outline-info " href="/register">Register</a>
+
+                            </button>
+
+                        </div>
+                        {% endif %}
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>

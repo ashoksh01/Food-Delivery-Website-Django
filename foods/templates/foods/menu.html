@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Menu</title>
+{% endblock title %}
+
+{% block main_content %}
+<div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+
+<h1 class="text-center text-uppercase m-3 font-weight-bold text-danger">Our Food Menu</h1>
+
+<div class="container ">
+    <div class="row justify-content-around " data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+        {% for i in categories %}
+        <h2>{{i.category_name}}</h2>
+        <div class="food_price text-center">
+            <img src="/{{i.category_image}}" width="200"/>
+        </div>
+        {% for j in i.food_set.all %}
+        <div class="menu-items d-flex justify-content-between">
+            <div class="food_name">
+                <p>{{j.food_name}}</p>
+            </div>
+        </div>
+        <div class="food_image text-center">
+            Rs. {{j.food_price }}
+        </div>
+
+    {% endfor %}
+    {% endfor %}
+</div>
+
+</div>
+</div>
+
+{% endblock main_content %}
